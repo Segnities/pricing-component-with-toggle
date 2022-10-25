@@ -24,9 +24,17 @@ function Card(props: Props) {
         <span>$</span>
         {props.price}
       </p>
-      <p className={styles["card-storage"]}>{props.storage}</p>
-      <p className={styles["card-user-allowed"]}>{props.usersAllowed}</p>
-      <p className={styles["card-send-up"]}>{props.sendUp}</p>
+      <hr />
+      <p className={styles["card-storage"]}>
+        {props.storage} {props.storageType} Storage
+      </p>
+      <hr />
+      <p className={styles["card-user-allowed"]}>
+        {props.usersAllowed} Users Allowed
+      </p>
+      <hr />
+      <p className={styles["card-send-up"]}>Send up to {props.sendUp} GB</p>
+      <hr />
       <p className={styles["card-learn-more"]}>
         <button>Learn more</button>
       </p>

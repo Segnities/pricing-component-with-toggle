@@ -1,9 +1,9 @@
 .card {
-  width: 280px;
+  width: 300px;
   display: grid;
   justify-content: center;
   align-items: center;
-  border-radius: 10px;
+  grid-template-columns: 1fr;
   background-color: #fff;
   text-align: center;
   padding: 0 30px;
@@ -11,7 +11,8 @@
 }
 
 .card p {
-  padding: 15px;
+  width: 100%;
+  padding: 16px 0;
 }
 
 .card-title {
@@ -22,10 +23,14 @@
   color: #fff;
 }
 
+.main-card hr {
+  border: none;
+  background-color: hsl(234, 14%, 74%);
+}
+
 .card-price {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid hsl(234, 14%, 74%);
   justify-content: center;
   font-size: 3.7em;
 }
@@ -37,41 +42,98 @@
 
 .card-storage {
   font-size: 12px;
-  border-bottom: 1px solid hsl(234, 14%, 74%);
 }
 
 .card-user-allowed {
   font-size: 12px;
-  border-bottom: 1px solid hsl(234, 14%, 74%);
 }
 
 .card-send-up {
   font-size: 12px;
-  border-bottom: 1px solid hsl(234, 14%, 74%);
 }
 
 .main-card {
-  padding: 20px 10px;
-  background: linear-gradient(135deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  border-radius: 10px;
+  padding: 20px 40px;
+  background-image: linear-gradient(135deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
   color: hsl(240, 78%, 98%);
 }
 
-.main-card .card-price {
-  border-bottom: 1px solid hsl(240, 78%, 98%);
-}
-
-.main-card .card-storage {
-  border-bottom: 1px solid hsl(240, 78%, 98%);
-}
-
-.main-card .card-user-allowed {
-  border-bottom: 1px solid hsl(240, 78%, 98%);
-}
-
-.main-card .card-send-up {
-  border-bottom: 1px solid hsl(240, 78%, 98%);
+.card hr {
+  width: 100%;
+  border: none;
+  height: 1px;
+  background-color:hsl(234, 14%, 74%) ;
+  justify-self: center;
 }
 
 .card-learn-more {
+  width: 100%;
   padding: 15px 0;
+}
+
+.card-learn-more button {
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 12px 0;
+  background-image: linear-gradient(135deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 12px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.card-learn-more button:hover {
+  background: transparent;
+  color: hsl(232, 13%, 33%);
+  border: 1px solid hsl(232, 13%, 33%);
+}
+
+.main-card .card-learn-more button {
+  background-color: #fff;
+  color: hsl(232, 13%, 33%);
+  background-image: none;
+
+}
+
+.main-card .card-learn-more button:hover {
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+@media screen and (max-width: 682px) {
+  .card {
+    width: 100%;
+    margin: 1rem 0;
+    border-radius: 10px;
+    padding: 20px 30px;
+  }
+  .card p {
+    padding: 22px 0;
+  }
+
+  .card-price {
+    font-size: 4.5em;
+  }
+
+  .card-learn-more button {
+    padding: 16px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .card p {
+    padding: 20px 0;
+  }
+
+  .card-price {
+    font-size: 4.3em;
+  }
+
+  .card-learn-more button {
+    padding: 13px 0;
+  }
 }

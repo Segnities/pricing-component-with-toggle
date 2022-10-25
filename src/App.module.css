@@ -5,14 +5,18 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url("./assets/bg-top.svg");
+  background: url("./assets/bg-top.svg") no-repeat top right, url("./assets/bg-bottom.svg") no-repeat bottom left;
+  background-repeat: no-repeat;
+  background-color: hsl(234, 3%, 93%);
+  overflow: hidden;
 }
 
 .wrapper {
-  padding-top: 8vh;
+  width: 100%;
+  padding-top: 2vh;
   padding-bottom: 10vh;
-  padding-right: 10vw;
-  padding-left: 10vw;
+  padding-right: 8vw;
+  padding-left: 8vw;
 }
 
 .proposal {
@@ -46,4 +50,37 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media screen and (max-width: 998px) {
+  .wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media screen and (max-width: 864px) {
+  .cards {
+    transform: scale(0.9);
+  }
+}
+
+@media screen and (max-width: 797px) {
+  .cards {
+    transform: scale(0.8);
+  }
+}
+
+@media screen and (max-width: 682px) {
+  .cards {
+    transform: scale(1);
+    flex-direction: column;
+    padding: 0 4vw;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .cards {
+    padding: 0 2vw;
+  }
 }
